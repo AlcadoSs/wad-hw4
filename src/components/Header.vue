@@ -31,7 +31,11 @@
             day: function() {
                 let date = this.today.getDate();
 
-                return date < 10 ?  `0${date}` : date
+                if (date < 10) {
+                    return `0${date}`
+                } else {
+                    return date
+                }
             },
             month: function() {
                 let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October',	'November', 'December'];
